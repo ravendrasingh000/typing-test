@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    background-image: url("background.jpg");
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#heading{
+    color: red;
+    background-color: azure;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 4px black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 90%;
+    height: 70vh;
+    max-width: 800px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: rgb(236, 211, 211);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#text-box {
+    width: 100%;
+    padding: 1rem;
+    max-height: 9rem;
+    border: 1px solid black;
+    background-color: rgb(174, 201, 206);
+    font-size: 1.5rem;
+    box-shadow: 0 1px 4px black;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+#text-box::-webkit-scrollbar {
+    display: none;
+}
+
+#input-box {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 1px 4px black;
+    border: none;
+    border-radius: 5px;
+}
+
+#start-btn {
+    height: 2.5rem;
+    width: 8rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 2px 4px 4px black;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: rgb(52, 52, 141);
+}
+
+#start-btn:active {
+    background-color: bisque;
+    color: black;
+}
+
+#howManyNum {
+    height: 2rem;
+    width: 5rem;
+    background-color: rgb(240, 5, 17);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+#howManyNum:hover{
+    background-color: rgb(201, 28, 28);
+}
+
+#howManyNum:active{
+    background-color: white;
+    color: black;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #text-box {
+        font-size: 0.9rem;
+    }
+
+    #start-btn {
+        width: 6.5rem;
+        font-size: 0.9rem;
+    }
+
+    #howManyNum {
+        width: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #text-box {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    #start-btn {
+        width: 6rem;
+        font-size: 0.8rem;
+    }
+
+    #howManyNum {
+        width: 4rem;
+    }
+}
+
+
+
+/* about result box */
+.result-box {
+    height: 75vh;
+    width: 90%;
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(220, 177, 92);
+    margin: 1rem auto;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.score {
+    text-align: center;
+}
+
+.speed {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Items ko stack karne ke liye chhoti screens par */
+    gap: 3rem;
+}
+
+.net-speed, .typing-speed {
+    border: 4px solid rgb(46, 11, 202);
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2.5rem;
+    color: rgb(46, 11, 202);
+    background-color: rgb(233, 229, 229);
+    margin: 1rem;
+}
+
+.net-speed {
+    color: rgb(9, 239, 224);
+    border-color: rgb(9, 239, 224);
+    background-color: rgb(38, 35, 35);
+}
+
+p {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+#ts, #ns {
+    font-weight: 900;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+#start-again {
+    display: block;
+    margin: 2rem auto;
+    height: 2.5rem;
+    width: 50%;
+    max-width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 2px 4px 4px black;
+}
+
+
+#start-again:hover {
+    background-color: rgb(52, 52, 141);
+}
+
+#start-again:active {
+    background-color: bisque;
+    color: black;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .result-box {
+        margin-top: 5rem;
+        padding: 0.5rem;
+    }
+
+    .net-speed, .typing-speed {
+        height: 6rem;
+        width: 6rem;
+        font-size: 1.2rem;
+    }
+
+    #start-again {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-box {
+        margin-top: 3rem;
+        padding: 0.5rem;
+    }
+
+    .net-speed, .typing-speed {
+        height: 5rem;
+        width: 5rem;
+        font-size: 1rem;
+    }
+
+    #start-again {
+        width: 90%;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

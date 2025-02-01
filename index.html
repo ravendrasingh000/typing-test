@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="heading">Typing Speed Test</h1>
+    <div class="container">
+      <div id="text-box">Select as many words as you want to write...</div>
+      <textarea placeholder="Type Here..." id="input-box"></textarea>
+      <button id="start-btn">Start</button>
+      <select id="howManyNum">
+        <option>Words</option>
+        <option>5</option>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+        <option>70</option>
+        <option>100</option>
+        <option>150</option>
+        <option>200</option>
+      </select>
+    </div>
+
+
+    <!-- result box -->
+    <div class="result-box" hidden>
+      <h1 class="score">Your Test Score</h1>
+      <div class="speed">
+        <div class="typs">
+          <div class="typing-speed">35 <br><p>WPM</p></div>
+          <p id="ts">Typing Speed</p>
+        </div>
+        <div class="typn">
+          <div class="net-speed">32 <br><p>WPM</p></div>
+          <p id="ns">Net Speed</p>
+        </div>
+      </div>
+      <button id="start-again">Start Again</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
