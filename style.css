@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 1rem;
     background-image: url("background.jpg");
+    background-size: cover;
 }
 
 h1 {
